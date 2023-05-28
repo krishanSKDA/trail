@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login & Registration.</title>
+</head>
+<body>
+    <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p><img src="./homepage/png3.png"></p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="index.html" class="link active" target=”_blank”>Home</a></li>
+                <li><a href="./gallery.html" class="link"target=”_blank”>Gallery</a></li>
+                <li><a href="#" class="link">Services</a></li>
+                <li><a href="./about1.html" class="link" target=”_blank”>About</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="white-btn" id="loginbtn" onclick="login()"> Sign In</button>
+            <button class="btn" id="registerbtn"onclick="register()"> Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+          <i> &#x2630; </i>     
+ 
+        </div>
+    </nav>
+    <!---Form box-->
+    <div class="form-box">
+       <!--Login form-->
+       <div class="login-container" id="login">
+        <div class="top">
+            <span>Don't have an account?<a href="#" onclick="register()">Sign Up</a> </span>
+            <header>Login</header>
+          </div>
+    
+         <div class="input-box">
+         <input type="text" class="input-field"  placeholder="Username or Email"id="Username" maxlength="15">
+         <i>&#x263B;</i>
+         </div>
+            <div class="input-box">
+            <input type="password" class="input-field" placeholder="password" maxlength="8">
+            <i>	&#x263B;</i>
+            </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sign In">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Remember ME</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">|Forgot password?</a></label>
+                    </div>
+                </div>
+            
+            </div>
+    
+        <!--Register form-->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account?<a href="#" onclick="login()">Login</a> </span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname" maxlength="10">
+                    <i>	&#9786;</i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname" maxlength="15">
+                    <i>	&#9786;</i>
+            </div>
+        </div>
+        <div class="input-box">
+            <input type="text" class="input-field" placeholder="Email" maxlength="15">
+            <i>	&#x2709;</i>
+             <div class="input-box">
+                <input type="password" class="input-field" placeholder="password" maxlength="8">
+                <i>	&#x1F512;</i>
+                    <div class="input-box">
+                        <input type="submit" class="submit"value="Register" >
+                    </div>
+                    <div class="two-col">
+                        <div class="one">
+                            <input type="checkbox" id="register-check">
+                            <label for="register-check">Remember ME</label>
+                        </div>
+                        <div class="two">
+                            <label><a href="#">Terms & Conditions</a></label>
+                        </div>
+                    </div>
+    </div>
+</div>  
+
+
+<script>
+    var a= document.getElementById("loginbtn");
+    var b= document.getElementById("registernbtn");
+    var x= document.getElementById("login");
+    var y= document.getElementById("register");
+
+    function login(){
+        x.style.left="4px";
+        y.style.right="-520px";
+        a.className += "  white-btn" ;
+        b.className ="btn" ;
+        x.style.opacity= 1;
+        y.style.opacity= 0;
+    }
+
+    function register(){
+        x.style.left="-510px";
+        y.style.right="5px" ;
+        a.className = "btn" ;
+        b.className += "  white-btn" ;
+        x.style.opacity= 1;
+        y.style.opacity= 0;
+    }
+    function awth(){
+        var Username= document.getElementById("Username" ).value;
+        var Username= document.getElementById("Username" ).value;
+    }
+</script>
+</body>
+<!--Referencese-->
+<!--Freepik downloader (no date) Freepik Downloader. Available at: https://fpdl.in/ (Accessed: 18 May 2023). -->
+</html>

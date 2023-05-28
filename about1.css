@@ -1,0 +1,183 @@
+*{
+   padding: 0;
+   margin: 0; 
+   box-sizing: border-box;
+}
+body{
+  background-color: #12172b;
+  font-family: 'Times New Roman', Times, serif;  
+}
+.container{
+    margin:20px 40px ;
+    color: white;
+}
+.heading{
+ font-size: 60px;
+ color: white;
+}
+.heading span{
+    font-style: italic;
+    font-size: 30px;
+
+}
+.profiles{
+   display: flex;
+   justify-content: space-between;
+   margin: 20px 40px;
+}
+.profile{
+    flex-basis: 260px;
+}
+.profile .profile-img{
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+
+
+}
+.profile:hover .profile-img{
+ filter: grayscale(0);
+}
+.user-name{
+    margin-top: 30px;
+    font-size: 35px;
+}
+.profile h5{
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: #ccc;
+}
+.profile p{
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+.icons a i img{
+    padding: 10px;
+}
+@media only screen and(max-width:1150px) {
+  .profiles{
+    flex-direction: column;
+  }    
+  .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile p{
+    text-align: center;
+    margin: 20px 60px 80px 60px;
+    font-size: 20px;
+  }
+}
+@media only screen and(max-width:900px){
+    .heading{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+    .heading span{
+        font-size: 15px;
+    }
+    .profiles{
+        margin: 20px 0;
+    }
+    .profile p{
+        margin: 20px 10px 80px 10px;
+    }
+
+
+}
+
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+  }
+  .column {
+    width: 100%;
+    padding: 0.5em 0;
+  }
+  h1 {
+    width: 100%;
+   
+  }
+  .card {
+    box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    color: #1f003b;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #ffffff;
+  }
+  .card .img-container {
+    width: 8em;
+    height: 8em;
+    background-color: #a993ff;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+  }
+  .card .img-container img {
+    width:110px;
+    border-radius: 50%;
+    height: 110px;
+  }
+  .card h3 {
+    font-weight: 500;
+  }
+  .card p {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+  }
+  .icons {
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+  }
+  .card:hover {
+    background: linear-gradient(#6045ea, #8567f7);
+    color: #ffffff;
+  }
+  .card:hover .img-container {
+    transform: scale(1.15);
+  }
+  .icons a i img{
+    width:100%;
+    border-radius: 50%;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 1em 7em;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em;
+    }
+    .card {
+      padding: 5em 1em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      padding: 0 1em;
+    }
+  }
+  

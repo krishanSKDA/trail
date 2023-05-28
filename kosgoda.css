@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+   
+    background-image: linear-gradient(rgba(12,23,45, 0.4),rgba(12,23,45, 0.4)),url(./kosgoda/back.jpg);
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;   
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px 0;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 10px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(255, 255, 255);
+    transition: width 0.2s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+
+/*kosgoda turtle hatchery*/
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+h2{
+    position: relative;
+    font-size: 100px;
+    color: #252839;
+    -webkit-text-stroke: 0.2vw #32469d; 
+    
+    
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color:#12bfd6;
+    -webkit-text-stroke: 0.1vw #20b628 ; 
+    border-right: 2px solid #12bfd6;
+    overflow: hidden;
+    animation: animate  6s linear infinite alternate;
+}
+@keyframes animate {
+    0%,10%,50%,65%,100% {
+        width: 30;
+    }
+    20%,30%,85%,90%{
+        width: 100%;
+    }
+    70%{
+     color: #32469d;
+    }
+}
+/*end it*/
+.images{
+    margin: 10px auto;
+    text-align: center;
+    background: #12bfd6;
+}
+.use-image img{
+    width: 400px;
+    height: 100%;
+    margin: 10px auto;
+   border: 2px solid black;
+   border-radius: 10px;
+   transition: 5s linear ;
+   cursor: pointer;  
+   animation: image;
+}
+@keyframes image{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+      transform: scale(1,8); 
+    }
+}
+.back{
+    background-image:linear-gradient(rgba(12,23,45, 0.4),rgba(12,23,45, 0.4)), url(kosgoda/img.jpg) ;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    
+}
+.content { 
+    max-width:800px;
+    text-align:left; 
+    margin:auto; 
+}
+.content p{
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.des h3{
+    font-size: 30px;
+    color: #000;
+ 
+}
+.paragraph ul li{
+    color: #fff;
+    font-weight: 300;
+    line-height: 30px;
+}
+strong{
+    color: rgb(0, 0, 0);
+}
+.location h4{
+    text-align: start;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 10px auto;
+}
+.location iframe{
+    width: 50%;
+    height: 300px;
+  border-radius: 20px;
+   
+}
+.services{
+    background-color: #119ae481;
+    display: flex;
+    
+}
+
+.services ul{
+    font-size: 28px;
+    list-style:disc;
+  
+}
+.services ul li{
+    margin-top: 2em;
+    margin-left: 2em;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+.ex{
+    background-color:  #12bfd6;
+    display: flex;
+}
+.ex1 h4{
+    color: #fff;
+    font-size: 35px;
+}
+.ex img{
+   width: 300px;
+   height: 300px;
+   margin: 20px;
+   border-radius: 10px;
+   cursor: pointer;
+  border: 4px black;
+
+}
+.ex img:hover{
+     transform: scaleX(80%);
+}
+.sup h3{
+    font-size: 30px;
+
+}
+.sup p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    border: 2px solid black;
+    text-align: center;
+
+}
+strong {
+    color: red;
+}
+/*----footer start---*/
+
+
+.footer1{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to right,#429f5f, #943a1c);
+    padding: 100px 0 30px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+
+}
+.row1{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+.column2{
+  padding: 5px;
+  flex-basis:25%;
+
+}
+.column1{
+  flex-basis: 25%;
+  padding: 10px;
+}
+.logo{
+  width: 100px;
+  margin-bottom: 30px;
+}
+.column1 p,h3,h4{
+  text-align: justify;
+  margin-left:60px ;
+  margin-top: 10px;
+}
+
+.column1 h3{
+  width: fit-content;
+  margin-bottom: 50px;
+  position: relative;
+}
+.column1 p{
+  margin-bottom: 15px;
+}
+.emailid{
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.column3 h3{
+  width: fit-content;
+  position: relative;
+  margin-right: 100px;
+
+}
+.column3 ul li{
+  list-style: none;
+  margin-bottom: 12px;
+  margin-left: 5px;
+}
+.column3 ul li a{
+  text-decoration: none ;
+  color: #fff;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.column3 ul ,li {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.column3 li,a{
+
+  padding-top: 10px;
+}
+.column3 [type="email"]{
+  margin-top: 50px;
+  text-align: justify;
+}
+form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px ;
+}
+form input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+form input[type=submit]{
+  background:transparent;
+  border: 0;
+  outline: none;
+  width: 50%;
+  cursor: pointer;
+}
+form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 50px;
+}
+.social-icons img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+hr{
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+
+}
+.copyright{
+  text-align: center;
+}
+.underline{
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.underline span{
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving{
+  0%{
+      left: -10px;
+      background-color: #e80808;
+  }
+  100%{
+      left: 100%;
+      background-color: #e80808;
+  }
+
+
+}
+@media (max-width: 700px){
+  footer{
+      bottom: unset;
+  }
+  .col{
+      flex-basis: 100%;
+      
+  }
+  .col:nth-child(2), .col:nth-child(3){
+      flex-basis: 100%;
+  }
+}
+
